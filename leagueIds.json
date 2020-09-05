@@ -1,0 +1,50 @@
+{
+"BSA": {
+"id": 2013,
+"caption": "Brazil Série A"
+},
+"PL": {
+"id": 2021,
+"caption": "English Premier League"
+},
+"EC": {
+"id": 2016,
+"caption": "English Championship"
+},
+"EUC": {
+"id": 2018,
+"caption": "European Championship"
+},
+"CL": {
+"id": 2001,
+"caption": "UEFA Champions League"
+},
+"FL1": {
+"id": 2015,
+"caption": "French Ligue 1"
+},
+"GB": {
+"id": 2002,
+"caption": "German Bundesliga"
+},
+"ISA": {
+"id": 2019,
+"caption": "Italy Serie A"
+},
+"NE": {
+"id": 2003,
+"caption": "Netherlands Eredivisie"
+},
+"PPL": {
+"id": 2017,
+"caption": "Portugal Primeira Liga"
+},
+"SPD": {
+"id": 2014,
+"caption": "Spain Primera Division"
+},
+"WC": {
+"id": 2000,
+"caption": "FIFA World Cup"
+}
+}

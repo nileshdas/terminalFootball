@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 7.10.1
+install:
+  - npm install
+cache:
+  directories:
+    - $HOME/.npm
+script:
+- npm run lint
