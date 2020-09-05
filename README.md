@@ -123,8 +123,3 @@ To lint your code, run
 ```sh
 $ npm run lint
 ```
-
-
-
-## Related
-You may find similar packages [here](http://api.football-data.org/libraries)
