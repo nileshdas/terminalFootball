@@ -266,7 +266,8 @@ const buildAndPrintStandings = (body, outData = {}) => {
         chalk.bold.white.bgBlue(' GF '),
         chalk.bold.white.bgBlue(' GA '),
         chalk.bold.white.bgBlue(' GD '),
-        chalk.bold.white.bgBlue(' Pts ')
+        chalk.bold.white.bgBlue(' Pts '),
+        chalk.bold.white.bgBlue(' Form ')
       ],
       colWidths: [7, 30]
     });
@@ -282,7 +283,8 @@ const buildAndPrintStandings = (body, outData = {}) => {
         chalk.bold.green(team.goalsFor),
         chalk.bold.magenta(team.goalsAgainst),
         chalk.bold.cyan(team.goalDifference),
-        chalk.bold.green(team.points)
+        chalk.bold.green(team.points),
+        chalk.bold.yellow(team.form)
       ]);
     })
 

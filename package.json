@@ -12,6 +12,10 @@
   "engines": {
     "node": ">=7.10.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nileshdas/terminalFootball.git"
+  },
   "author": "Nilesh Das",
   "license": "MIT",
   "dependencies": {
