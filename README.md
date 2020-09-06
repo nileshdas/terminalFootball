@@ -3,6 +3,24 @@
 Please register on [football-data.org](http://api.football-data.org/register) to get your API Key. Then run `$ football config` to add your API Key (use `sudo` if required). Requests made using API key increases your rate limit from 50 reqs per day to 50 requests per minute
 
 
+## Development
+
+Run:
+
+```sh
+Clone the repo
+$ cd football-cli
+$ npm link
+```
+
+This will setup a symbolic link to the CLI. Any changes in source files will now be reflected when running the `football` command.
+
+To lint your code, run
+
+```sh
+$ npm run lint
+```
+
 ## Usage
 
 ### Commands available
@@ -102,24 +120,4 @@ Options:
 Examples:
   football config
 
-```
-
-
-
-## Development
-
-Run:
-
-```sh
-Clone the repo
-$ cd football-cli
-$ npm link
-```
-
-This will setup a symbolic link to the CLI. Any changes in source files will now be reflected when running the `football` command.
-
-To lint your code, run
-
-```sh
-$ npm run lint
 ```
