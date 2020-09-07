@@ -1,6 +1,6 @@
 {
   "name": "terminalfootball",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get live football scores and fixtures on your terminal with ease",
   "main": "cli.js",
   "scripts": {
