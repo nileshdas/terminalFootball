@@ -93,6 +93,21 @@ Examples:
 
 ```
 
+#### Command `topscorers`
+Get topscorers of a particular league
+
+```shell
+Usage: football topscorers [options]
+
+Options:
+  -h, --help    Show help                                         [boolean]
+  -l, --league  League to be searched                             [required]
+
+Examples:
+  football topscorers -l FL1
+
+```
+
 #### Command `lists`
 List of codes of various competitions
 
