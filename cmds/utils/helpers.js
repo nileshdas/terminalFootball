@@ -335,10 +335,90 @@ const buildAndPrintStandings = (body, outData = {}) => {
   }
 };
 
+
+// TOP SCORERS
+
+
+const buildAndPrintTopScorers = (body, outData = {}) => {
+  const data = JSON.parse(body);
+  let table;
+
+  if ('error' in data) {
+    updateMessage('CUSTOM_ERR', data.error);
+    return;
+  }
+
+  if (data.scorers !== undefined) {
+    const { scorers } = data;
+
+    table = new Table({
+      head: [
+        chalk.bold.white.bgBlue(' Player '),
+        chalk.bold.white.bgBlue(' Goals Scored '),
+
+      ],
+      colWidths: [30, 20]
+    });
+
+    (scorers).forEach((footballer) => {
+      table.push([
+        chalk.bold.magenta(footballer.player.name),
+        chalk.bold.cyan(footballer.numberOfGoals),
+      ]);
+    })
+
+
+    console.log(table.toString());
+
+    if (outData.json !== undefined || outData.csv !== undefined) {
+      exportData(outData, standings);
+    }
+  } else {
+    const groupStandings = data.standings;
+
+    Object.keys(groupStandings).forEach(groupCode => {
+      console.log(chalk.bgBlue.bold.white(` Group: ${groupCode} `));
+
+      const group = groupStandings[groupCode];
+
+      table = new Table({
+        head: [
+          chalk.bold.white.bgBlue(' # '),
+          chalk.bold.white.bgBlue(' Team '),
+          chalk.bold.white.bgBlue(' MP '),
+          chalk.bold.white.bgBlue(' GF '),
+          chalk.bold.white.bgBlue(' GA '),
+          chalk.bold.white.bgBlue(' GD '),
+          chalk.bold.white.bgBlue(' Pts ')
+        ],
+        colWidths: [7, 30]
+      });
+
+      Object.values(group).forEach(team => {
+        table.push([
+          chalk.bold.magenta(team.position),
+          chalk.bold.cyan(team.team),
+          chalk.bold.magenta(team.playedGames),
+          chalk.bold.green(team.goals),
+          chalk.bold.magenta(team.goalsAgainst),
+          chalk.bold.cyan(team.goalDifference),
+          chalk.bold.green(team.points)
+        ]);
+      });
+      console.log(table.toString());
+    });
+
+    if (outData.json !== undefined || outData.csv !== undefined) {
+      exportData(outData, groupStandings);
+    }
+  }
+};
+
 module.exports = {
   buildAndPrintFixtures,
   buildAndPrintScores,
   buildAndPrintStandings,
+  buildAndPrintTopScorers,
   updateMessage,
   exportData
 };
