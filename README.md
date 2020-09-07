@@ -16,7 +16,7 @@ Run:
 
 ```sh
 Clone the repo
-$ cd football-cli
+$ cd terminalfootball
 $ npm link
 ```
 
