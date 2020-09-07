@@ -2,6 +2,13 @@
 
 Please register on [football-data.org](http://api.football-data.org/register) to get your API Key. Then run `$ football config` to add your API Key (use `sudo` if required). Requests made using API key increases your rate limit from 50 reqs per day to 50 requests per minute
 
+## Installation
+
+Run:
+
+```sh
+$ npm i -g terminalfootball
+```
 
 ## Development
 
